@@ -6,16 +6,21 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body{
+    background-color: burlywood;
+}
+
 /* header style */
 #headerContainer > h1{
+
     font-size: large;
     font-weight: bold;
-    color: rgb(147, 147, 127);
+    color: rgba(170, 4, 4, 0.8);
 }
 #headerContainer > small{
     font-size: small;
     font-weight: lighter;
-    color: brown;
+    color: rgba(170, 3, 3, 0.799);
 }
 #headerContainer {
     margin: 50px;
@@ -28,23 +33,85 @@
 #formContainer {
     font-size: large;
     font-weight: bold;
-    text-align: center;
-    padding: 30px;
-    box-shadow: 10px 7px rgb(64, 63, 63);
-    border-radius: 15px;
-    background-color: rgb(127, 132, 137);
-
-}
-#listContainer > h2{
-    font-size: large;
-    font-weight: bold;
-    margin: 20px;
-}
-#listContainer {
-    text-align: center;
     margin: 50px;
     padding: 30px;
     box-shadow: 10px 7px rgb(64, 63, 63);
     border-radius: 15px;
     background-color: rgb(127, 132, 137);
+}
+
+#formContainer > #studentForm > .input-field{
+    display: flex;
+    flex-direction: column;
+}
+
+#formContainer > #studentForm > .input-field > label{
+    font-size: large;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#formContainer > #studentForm > .input-field > input{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+#formContainer > #studentForm :nth-last-child(1) > button{
+    background-color: rgb(170, 3, 3, 0.8);
+    color: aliceblue;
+    flex-grow: 1;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+}
+
+#listContainer > .list-item{
+    margin: 50px;
+    padding: 30px;
+    box-shadow: 10px 7px rgb(64, 63, 63);
+    border-radius: 15px;
+    background-color: rgb(127, 132, 137);
+    margin-right: 15px;
+}
+#listContainer > .list-item > h2{
+    font-size: large;
+    font-weight: bold;
+}
+#listContainer > .list-item > p{
+   font-weight: bold;
 } 
+
+#listContainer > .list-item > button{
+    background-color: rgb(170, 3, 3, 0.8);
+    color: aliceblue;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+}
+
+#listContainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@media (width <= 320px){
+    #listContainer > .list-item{
+        grid-column: span 12;
+    }
+}
+
+@media (width > 1000px){
+    #listContainer > .list-item{
+        grid-column: span 2;
+    }
+}
+
+@media (width > 320px) and (width < 1000px){
+    #listContainer > .list-item{
+        grid-column: span 4;
+    }
+}
+
